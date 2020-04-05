@@ -1,0 +1,22 @@
+{
+  "name": "cracking-coding-interview",
+  "version": "1.0.0",
+  "description": "Cracking the Coding Interview - Answers in Javascript",
+  "main": "index.js",
+  "scripts": {
+    "lint": "eslint ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ihsansatriawan/cracking-coding-interview.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ihsansatriawan/cracking-coding-interview/issues"
+  },
+  "homepage": "https://github.com/ihsansatriawan/cracking-coding-interview#readme",
+  "devDependencies": {
+    "eslint": "^6.8.0"
+  }
+}
