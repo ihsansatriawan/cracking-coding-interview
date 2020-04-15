@@ -1,0 +1,32 @@
+name: Lint
+
+on:
+  push:
+    branches:
+      - master
+    paths-ignore:
+      - '**.md'
+  pull_request:
+    paths-ignore:
+      - '**.md'
+
+jobs:
+  run-linters:
+    name: Run linters
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v2
+
+      - name: Set Node.js 12.x
+        uses: actions/setup-node@v1
+        with:
+          node-version: 12.x
+
+      # ESLint and Prettier must be in `package.json`
+      - name: Install Node.js dependencies
+        run: npm install
+
+      - name: Lint
+        run: npm run lint
