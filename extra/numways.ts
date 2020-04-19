@@ -3,6 +3,11 @@
 // decode 112 = "aab", "kb", "al"
 // numways(112) = 3
 
+// source https://www.youtube.com/watch?v=qli-JCrSwuk
+// "You can actually use just two integers ( perv1, and prev2)
+// instead of memo array - and thus solve it in O(1) space", Shimon 1973
+
+
 type Helper = (number: string, k: number, memo: Array<number>) => number;
 const helper: Helper = (number, k, memo) => {
   if (k === 0) return 1;
