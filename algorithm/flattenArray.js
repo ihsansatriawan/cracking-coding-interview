@@ -2,22 +2,23 @@
 // Input: [1,[2,[3],4],[5]]
 // Output: [1,2,3,4,5]
 
-const helper = (newArray, currArray) => {
-  currArray.forEach((element) => {
-    if (Array.isArray(element)) {
-      helper(newArray, element);
-    } else {
-      newArray.push(element);
-    }       
-  });
-};
 
 const flattenArray = (input) => {
-  if (input === null || input.length === 0) {return [];}
-  const result = [];
+  
+  const result = []
 
-  helper(result, input);
-
+  for(var i = 0; i < input.length; i++) {
+    if (Array.isArray(input[i])) {
+      // result.push(...flattenArray(input[i]))
+      const temp = flattenArray(input[i])
+      temp.forEach(el => {
+        result.push(el)
+      });
+    } else {
+      result.push(input[i])
+    }
+  }
+  
   return result;
 };
 
