@@ -5,17 +5,17 @@
 
 const flattenArray = (input) => {
   
-  const result = []
+  const result = [];
 
   for(var i = 0; i < input.length; i++) {
     if (Array.isArray(input[i])) {
       // result.push(...flattenArray(input[i]))
-      const temp = flattenArray(input[i])
+      const temp = flattenArray(input[i]);
       temp.forEach(el => {
-        result.push(el)
+        result.push(el);
       });
     } else {
-      result.push(input[i])
+      result.push(input[i]);
     }
   }
   
